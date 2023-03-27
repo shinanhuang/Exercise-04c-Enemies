@@ -1,10 +1,18 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://StateMachine/StateMachine.gd" type="Script" id=4]
 [ext_resource path="res://Enemies/Golem.gd" type="Script" id=5]
 [ext_resource path="res://Enemies/Golem_Die.gd" type="Script" id=6]
 [ext_resource path="res://Enemies/Golem_Move.gd" type="Script" id=7]
 [ext_resource path="res://Enemies/Golem_Attack.gd" type="Script" id=8]
+
+[sub_resource type="SpriteFrames" id=55]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=53]
 extents = Vector2( 73.5, 93 )
@@ -20,6 +28,7 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 5, 5 )
+frames = SubResource( 55 )
 offset = Vector2( 7, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
