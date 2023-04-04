@@ -47,7 +47,6 @@ func damage():
 	collision_layer = 0
 	collision_mask = 0 
 
-
 func _on_Attack_body_entered(body):
 	if mode != "attack" and body.name == "Player":
 		change_mode("attack")
